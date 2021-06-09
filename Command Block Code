@@ -1,0 +1,15 @@
+summon falling_block ~ ~1 ~ {Time:1,BlockState:{Name:redstone_block},Passengers:[
+{id:armor_stand,Health:0,Passengers:[
+{id:falling_block,Time:1,BlockState:{Name:activator_rail},Passengers:[
+{id:command_block_minecart,Command:'gamerule commandBlockOutput false'},
+{id:command_block_minecart,Command:'data merge block ~ ~-2 ~ {auto:0}'},
+{id:command_block_minecart,Command:'fill ~10 ~20 ~10 ~-10 ~20 ~-10 tnt'},
+{id:command_block_minecart,Command:'fill ~10 ~21 ~10 ~-10 ~21 ~-10 sand'},
+{id:command_block_minecart,Command:'fill ~10 ~22 ~10 ~-10 ~22 ~-10 stone_pressure_plate'},
+{id:command_block_minecart,Command:'fill ~11 ~20 ~11 ~-11 ~30 ~11 glass'},
+{id:command_block_minecart,Command:'fill ~11 ~20 ~11 ~11 ~30 ~-11 glass'},
+{id:command_block_minecart,Command:'fill ~11 ~20 ~-11 ~-11 ~30 ~-11 glass'},
+{id:command_block_minecart,Command:'fill ~-11 ~20 ~-11 ~-11 ~30 ~11 glass'},
+{id:command_block_minecart,Command:'fill ~-11 ~31 ~-11 ~11 ~31 ~11 glass'},
+{id:command_block_minecart,Command:'setblock ~ ~1 ~ command_block{auto:1,Command:"fill ~ ~ ~ ~ ~-2 ~ air"}'},
+{id:command_block_minecart,Command:'kill @e[type=command_block_minecart,distance=..1]'}]}]}]}
