@@ -1,0 +1,28 @@
+summon falling_block ~ ~1 ~ {Time:1,BlockState:{Name:redstone_block},Passengers:[
+{id:armor_stand,Health:0,Passengers:[
+{id:falling_block,Time:1,BlockState:{Name:activator_rail},Passengers:[
+{id:command_block_minecart,Command:'gamerule commandBlockOutput false'},
+{id:command_block_minecart,Command:'data merge block ~ ~-2 ~ {auto:0}'},
+{id:command_block_minecart,Command:'team leave @a'},
+{id:command_block_minecart,Command:'title @a times 20 20 20'},
+{id:command_block_minecart,Command:'fill ~10 ~20 ~10 ~-10 ~20 ~-10 command_block{Command:"setblock ~ ~ ~ air"}'},
+{id:command_block_minecart,Command:'fill ~10 ~21 ~10 ~-10 ~21 ~-10 sand'},
+{id:command_block_minecart,Command:'fill ~10 ~22 ~10 ~-10 ~22 ~-10 stone_pressure_plate'},
+{id:command_block_minecart,Command:'fill ~11 ~20 ~11 ~-11 ~30 ~11 glass'},
+{id:command_block_minecart,Command:'fill ~11 ~20 ~11 ~11 ~30 ~-11 glass'},
+{id:command_block_minecart,Command:'fill ~11 ~20 ~-11 ~-11 ~30 ~-11 glass'},
+{id:command_block_minecart,Command:'fill ~-11 ~20 ~-11 ~-11 ~30 ~11 glass'},
+{id:command_block_minecart,Command:'fill ~-11 ~31 ~-11 ~11 ~31 ~11 glass'},
+{id:command_block_minecart,Command:'fill ~10 ~27 ~10 ~-10 ~27 ~-10 glass'},
+{id:command_block_minecart,Command:'team add Team1'},
+{id:command_block_minecart,Command:'team add Team2'},
+{id:command_block_minecart,Command:'team join Team1 @r[team=!Team1,team=!Team2]'},
+{id:command_block_minecart,Command:'team join Team2 @r[team=!Team1,team=!Team2]'},
+{id:command_block_minecart,Command:'tp @a[team=Team1] ~8 ~28 ~'},
+{id:command_block_minecart,Command:'tp @a[team=Team2] ~-8 ~28 ~'},
+{id:command_block_minecart,Command:'setblock ~ ~ ~3 command_block{Command:"title @a[distance=..20] title {"text":"3","color","red"}"}'},
+{id:command_block_minecart,Command:'setblock ~ ~ ~5 command_block{Command:"title @a[distance=..20] title {"text":"2","color","yellow"}"}'},
+{id:command_block_minecart,Command:'setblock ~ ~ ~5 command_block{Command:"title @a[distance=..20] title {"text":"1","color","yellow"}"}'},
+{id:command_block_minecart,Command:'setblock ~ ~ ~7 command_block{Command:"title @a[distance=..20] title {"text":"Go!","color","green"}"}'},
+{id:command_block_minecart,Command:'setblock ~ ~1 ~ command_block{auto:1,Command:"fill ~ ~ ~ ~ ~-2 ~ air"}'},
+{id:command_block_minecart,Command:'kill @e[type=command_block_minecart,distance=..1]'}]}]}]}
